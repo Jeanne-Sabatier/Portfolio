@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Structure générale */
+.layout {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 33%;
+  height: 100vh;
+  background: rgb(255, 162, 207);
+  border-right: 1px solid #e2d6ee;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Barre de recherche */
+.search-bar {
+  background-color: rgb(255, 235, 235);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d2bddf;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+/* Liste des conversations */
+.conversations {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.conversation {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(255, 235, 235);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #eadff3;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.conversation:hover {
+  background: #f0e6fa;
+}
+
+/* Zone de messages */
+.chat-area {
+  width: 67%;
+  height: 100vh;
+  padding: 20px;
+  background: rgb(255, 214, 214);
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bulles de messages */
+.message {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 8px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Toi */
+.me {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #6586ff, #9cabff);
+  align-self: flex-end;
+}
+
+/* Elle */
+.her {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(255, 235, 235);
+  border: 1px solid #ffc0cb;
+  align-self: flex-start;
+}
+
+/* Button de retour à l'accueil */
+.return-home {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  text-decoration: none;
+  color: rgb(100, 100, 100);
+  font-size: 16px;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+  font-weight: bold;
+}
+
+.return-home:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
